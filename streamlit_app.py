@@ -84,7 +84,17 @@ if csv_file is not None:
     print('Validation accuracy:', score[1])
 #     X_test=X_test.head()
     predictions = model.predict(X_test)
-    st.write("Predicted values")
-    st.write(predictions)
-    st.write("Original values")
-    st.write(y_test)
+#     st.write("Predicted values")
+#     st.write(predictions)
+#     st.write("Original values")
+#     st.write(y_test)
+    
+    col1, col2 = st.beta_columns(2)
+    with col1:
+         st.write("Original values")
+         st.write(y_test)
+
+    with col2:
+        st.write("Predicted values")
+        st.write(predictions)
+    
