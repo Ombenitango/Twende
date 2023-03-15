@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Title of the app
-st.title("CSV File Processor")
+st.title("Twende an AI model for predicting cost of an event")
 
 # Upload CSV file
 csv_file = st.file_uploader("Upload CSV", type=["csv"])
