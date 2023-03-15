@@ -20,7 +20,7 @@ st.title("Twende an AI model for predicting cost of an event")
 
 # Upload CSV file
 csv_file = st.file_uploader("Upload CSV", type=["csv"])
-data_frame
+
 # Check if a file has been uploaded
 if csv_file is not None:
     # Load CSV file into a Pandas DataFrame
@@ -29,5 +29,61 @@ if csv_file is not None:
 
     # Show the DataFrame in the app
     st.write("Original DataFrame:")
-st.write(data_frame)
-   
+    st.write(data_frame)
+    data_frame=data_frame.drop(index=data_frame.index[-1])
+    df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
+    df_encoded=df_encoded.astype(np.float32)
+    df_encoded.plot(kind='scatter',figsize=(15,10),x="Estimated Cost ($)",y='Venue cost')
+    plt.grid()
+    plt.show()
+    
+    # Define hyperparameters
+    input_dim = 51  # number of input variables
+    output_dim = 1  # number of output variables
+    hidden_dim = 30  # number of neurons in the hidden layer
+    num_epochs = 50  # number of epochs to train the model
+    batch_size = 100  # size of batch for each epoch
+    learning_rate = 0.01  # learning rate for the optimizer
+    
+        # Split the data into input (X) and output (y) variables
+    X = df_encoded.drop(columns='Estimated Cost ($)')
+    y = df_encoded['Estimated Cost ($)']
+
+    # Split the data into training, validation, and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+    X_train, X_val, y_train, y_val = train_test_split(X_train, y_train, test_size=0.2)
+    
+    
+        # Create the model architecture
+    model = Sequential()
+    model.add(Dense(hidden_dim, input_dim=input_dim, activation='relu'))
+    model.add(Dense(20, activation='relu'))
+    model.add(Dense(10, activation='relu'))
+    model.add(Dropout(0.2))
+    model.add(Dense(1))
+    # Compile the model
+    model.compile(loss='mape', optimizer=Adam(lr=learning_rate), metrics=['mape'])
+
+    # Train the model on the training data
+    history = model.fit(X_train, y_train,epochs=num_epochs,batch_size=batch_size, validation_data=(X_val, y_val))
+    #predict values using the trained model
+    predictions = model.predict(X_test)
+    
+    y_test=np.array(y_test)
+    plt.plot(predictions)
+    plt.plot(y_test)
+
+    # set the axis labels and title
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('Predicted value against real value')
+    # display the plot
+    plt.show()
+    score = model.evaluate(X_val, y_val, verbose=0)
+    print('Validation loss:', score[0])
+    print('Validation accuracy:', score[1])
+    X_test=X_test.head()
+    predictions = model.predict(X_test)
+    predictions
+    y_test
+
