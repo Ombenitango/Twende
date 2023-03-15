@@ -84,6 +84,7 @@ if csv_file is not None:
     print('Validation accuracy:', score[1])
     X_test=X_test.head()
     predictions = model.predict(X_test)
-    predictions
-    y_test
-
+    st.write("Predicted values")
+    st.write(predictions)
+    st.write("Original values")
+    st.write(y_test)
