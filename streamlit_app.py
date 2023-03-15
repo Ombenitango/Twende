@@ -82,7 +82,7 @@ if csv_file is not None:
     score = model.evaluate(X_val, y_val, verbose=0)
     print('Validation loss:', score[0])
     print('Validation accuracy:', score[1])
-    X_test=X_test.head()
+#     X_test=X_test.head()
     predictions = model.predict(X_test)
     st.write("Predicted values")
     st.write(predictions)
