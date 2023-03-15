@@ -29,5 +29,5 @@ if csv_file is not None:
 
     # Show the DataFrame in the app
     st.write("Original DataFrame:")
- st.write(data_frame)
+st.write(data_frame)
    
