@@ -18,8 +18,6 @@ from tensorflow.keras.optimizers import Adam
 # Title of the app
 st.title("Twende an AI model for predicting cost of an event")
 
-# Upload CSV file
-csv_file = st.file_uploader("Upload CSV", type=["csv"])
 
 text1 = st.text_input("Event name", value="")
 
