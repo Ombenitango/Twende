@@ -76,7 +76,7 @@ if st.button("Process"):
          col1, col2 = st.beta_columns(2)
          with col1:
               st.write("Original values")
-              st.write(df)
+              st.write(data_frame)
 
          with col2:
              st.write("Predicted values")
