@@ -21,6 +21,34 @@ st.title("Twende an AI model for predicting cost of an event")
 # Upload CSV file
 csv_file = st.file_uploader("Upload CSV", type=["csv"])
 
+col1, col2, col3, col4, col5, col6, col7, col8, col9, col10, col11, col12, col13 = st.beta_columns(13)
+    with col1:
+        text1 = st.text_input("Text 1", value="")
+    with col2:
+        text2 = st.text_input("Text 2", value="")
+    with col3:
+        text3 = st.text_input("Text 3", value="")
+    with col4:
+        text4 = st.text_input("Text 4", value="")
+    with col5:
+        text5 = st.text_input("Text 5", value="")
+    with col6:
+        text6 = st.text_input("Text 6", value="")
+    with col7:
+        text7 = st.text_input("Text 7", value="")
+    with col8:
+        text8 = st.text_input("Text 8", value="")
+    with col9:
+        text9 = st.text_input("Text 9", value="")
+    with col10:
+        text10 = st.text_input("Text 10", value="")
+    with col11:
+        text11 = st.text_input("Text 11", value="")
+    with col12:
+        text12 = st.text_input("Text 12", value="")
+    with col13:
+        text13 = st.text_input("Text 13", value="")
+
 # Check if a file has been uploaded
 if csv_file is not None:
     # Load CSV file into a Pandas DataFrame
