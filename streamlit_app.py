@@ -68,7 +68,8 @@ if st.button("Process"):
          data_frame['Location'] = pd.factorize(data_frame['Location'])[0]
                
          loaded_model = tf.keras.models.load_model('Twende/assets')
-         data_frame.type
+         data_frame=np.array(data_frame).astype(float32)
+         data_frame
 #         # make predictions on new data
 #          predict = loaded_model.predict(data_frame)
         
