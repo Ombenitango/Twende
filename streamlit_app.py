@@ -40,10 +40,10 @@ text9 = st.text_input("Duration(days)", value="")
 text10 = st.text_input("Transportation&Communication Cost", value="")
 
 text11 = st.text_input("Guest of honor Cost", value="")
+text12 = st.text_input("Staff&Volunteer Expenses", value="")
+text13 = st.text_input("Insurance Cost", value="")
 
-text12 = st.text_input("Insurance Cost", value="")
-
-text13 = st.text_input("Miscellaneous Expenses", value="")
+text14 = st.text_input("Miscellaneous Expenses", value="")
 
 if st.button("Process"):
 #         "Arusha","Dar-es-salaam","Dodoma","Geita","Iringa","Kagera","Katavi","Kigoma","Kilimanjaro","Manyara","Mbeya","Morogoro","Mwanza","Pwani","Rukwa","Singida","Songea","Tabora","Tanga","Zanzibar"
@@ -59,8 +59,9 @@ if st.button("Process"):
                 "Duration(days)": [text9],
                 "Transportation&Communication Cost": [text10],
                 "Guest of honor Cost": [text11],
-                "Insurance Cost": [text12],
-                "Miscellaneous Expenses": [text13]}
+                "Staff&Volunteer Expenses": [text12],
+                "Insurance Cost":[text13]
+                "Miscellaneous Expenses": [text14]}
         
          data_frame = pd.DataFrame(data)
          data_frame['Event name'] = pd.factorize(data_frame['Event name'])[0]
