@@ -61,10 +61,10 @@ if st.button("Process"):
                 "Insurance Cost": [text12],
                 "Miscellaneous Expenses": [text13],
                }
-        data_frame = pd.DataFrame(data)
-        df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
-        df_encoded=df_encoded.astype(np.float32)
-        df_encoded
+#         data_frame = pd.DataFrame(data)
+#         df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
+#         df_encoded=df_encoded.astype(np.float32)
+#         df_encoded
                 
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
