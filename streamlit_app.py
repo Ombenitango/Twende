@@ -80,6 +80,6 @@ if st.button("Process"):
 
          with col2:
              columns = ['Estimated values']
-             df = pd.DataFrame(predict, columns=columns,index=" ")  
-             st.write(df)
+             df = pd.DataFrame(predict, columns=columns)  
+             st.write(df['Estimated values'])
     
