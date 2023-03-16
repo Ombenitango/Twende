@@ -79,7 +79,7 @@ if st.button("Process"):
 #               st.write(data_frame)
 
          with col2:
-             columns = ['Estimated values']
+             columns = ['Estimated cost']
              df = pd.DataFrame(predict, columns=columns)  
-             df['Estimated values']
+             df['Estimated cost']
     
