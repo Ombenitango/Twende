@@ -70,7 +70,7 @@ if st.button("Process"):
          loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
-         predict = loaded_model.predict(df)
+         predict = loaded_model.predict(data_frame)
         
          col1, col2 = st.beta_columns(2)
          with col1:
