@@ -75,10 +75,10 @@ if st.button("Process"):
         
          col1, col2 = st.beta_columns(2)
          with col1:
-              st.write("Original values")
-              st.write(data_frame)
+#               st.write("Original values")
+#               st.write(data_frame)
 
          with col2:
-             st.write("Predicted values")
+             st.write("Estimated values")
              st.write(predict)
     
