@@ -79,7 +79,6 @@ if st.button("Process"):
 #               st.write(data_frame)
 
          with col2:
-             columns = ['Estimated cost']
-             df = pd.DataFrame(predict, columns=columns)  
-             predict[0][0]
+             st.title("Estimated Cost is:{}",predict[0][0])   
+             
     
