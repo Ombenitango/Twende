@@ -66,18 +66,18 @@ if st.button("Process"):
          data_frame = pd.DataFrame(data)
          data_frame['Event name'] = pd.factorize(data_frame['Event name'])[0]
          data_frame['Location'] = pd.factorize(data_frame['Location'])[0]
-         data_frame.shape       
-#         loaded_model = tf.keras.models.load_model('Twende/assets')
+               
+         loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
-#         predict = loaded_model.predict(df)
+         predict = loaded_model.predict(df)
         
-#         col1, col2 = st.beta_columns(2)
-#         with col1:
-#              st.write("Original values")
-#              st.write(df)
+         col1, col2 = st.beta_columns(2)
+         with col1:
+              st.write("Original values")
+              st.write(df)
 
-#         with col2:
-#             st.write("Predicted values")
-#             st.write(predict)
+         with col2:
+             st.write("Predicted values")
+             st.write(predict)
     
