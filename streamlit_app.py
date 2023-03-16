@@ -74,7 +74,7 @@ if st.button("Process"):
          predict = loaded_model.predict(data_frame)
         
          col1, col2 = st.beta_columns(2)
-         with col1:
+#          with col1:
 #               st.write("Original values")
 #               st.write(data_frame)
 
