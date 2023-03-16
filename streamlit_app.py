@@ -100,12 +100,12 @@ if st.button("Process"):
                 'Location_Tanga':[0.0],
                 'Location_Zanzibar':[0.0]
                }
-        data
-        # Convert the dictionary to Pandas dataframe
-#         data_frame = pd.DataFrame(data)
-#         df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
-#         data_frame=data_frame.astype(np.float32)
-#          data_frame.shape
+        
+#         Convert the dictionary to Pandas dataframe
+        data_frame = pd.DataFrame(data)
+        df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
+        data_frame=data_frame.astype(np.float32)
+        data_frame
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
