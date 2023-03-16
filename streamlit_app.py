@@ -79,6 +79,9 @@ if st.button("Process"):
 #               st.write(data_frame)
 
          with col2:
-             st.title("Estimated Cost is:{}",predict[0][0])   
+             string = "Estimated Cost is: "
+             number=  predict[0][0]
+             result = f"{string}{number}"   
+             st.title(result)   
              
     
