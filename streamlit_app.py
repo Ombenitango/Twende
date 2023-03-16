@@ -60,7 +60,7 @@ if st.button("Process"):
                 "Transportation&Communication Cost": [text10],
                 "Guest of honor Cost": [text11],
                 "Staff&Volunteer Expenses": [text12],
-                "Insurance Cost":[text13]
+                "Insurance Cost":[text13],
                 "Miscellaneous Expenses": [text14]}
         
          data_frame = pd.DataFrame(data)
