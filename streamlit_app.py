@@ -62,8 +62,10 @@ if st.button("Process"):
                 "Miscellaneous Expenses": [text13]}
 
         # Convert the dictionary to Pandas dataframe
-        df = pd.DataFrame(data)
-        df.shape
+        data_frame = pd.DataFrame(data)
+        df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
+        df_encoded=df_encoded.astype(np.float32)
+        df_encoded
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
