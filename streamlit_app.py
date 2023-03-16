@@ -80,5 +80,7 @@ if st.button("Process"):
 
          with col2:
              st.write("Estimated values")
+             columns = ['Estimated values']
+             df = pd.DataFrame(predict, columns=columns, index=1)  
              st.write(predict)
     
