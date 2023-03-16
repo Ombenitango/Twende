@@ -75,7 +75,7 @@ if st.button("Process"):
         
          string = "Estimated Cost is: "
          number=  predict[0][0]
-         result = f"{string}{number}"   
+         result = f"{string}{number} TSH"   
          st.write(f"**{result}**") 
   
              
