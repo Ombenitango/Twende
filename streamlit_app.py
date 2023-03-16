@@ -81,6 +81,8 @@ if st.button("Process"):
          with col2:
              columns = ['Estimated cost']
              df = pd.DataFrame(predict, columns=columns)  
-             df=  df['Estimated cost']
-             df   
+             X=  df.drop(columns='Estimated cost')
+             y=  df['Estimated cost']
+             X
+             y   
     
