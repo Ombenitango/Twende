@@ -105,7 +105,7 @@ if st.button("Process"):
         data_frame = pd.DataFrame(data)
 #         df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
 #         df_encoded=df_encoded.astype(np.float32)
-         data_frame.shape
+#          data_frame.shape
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
