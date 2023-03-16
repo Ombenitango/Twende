@@ -104,7 +104,7 @@ if st.button("Process"):
         # Convert the dictionary to Pandas dataframe
         data_frame = pd.DataFrame(data)
 #         df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
-#         df_encoded=df_encoded.astype(np.float32)
+        data_frame=data_frame.astype(np.float32)
 #          data_frame.shape
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
