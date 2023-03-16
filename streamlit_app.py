@@ -46,7 +46,6 @@ text12 = st.text_input("Insurance Cost", value="")
 text13 = st.text_input("Miscellaneous Expenses", value="")
 
 if st.button("Process"):
-        
         # Create a dictionary to store the input values
          data = {"Event name": [text1,"Dar es Salaam Startup","Pitch Night Tanzania", "Pitch Night Tanzania","STEM Education and Innovation Conference","STEM for Girls Workshop","Tanzania Entrepreneurship Summit","Tanzania Fashion Week","Tanzania Food Festival","Tanzania Science Fair","Tanzania Tech Summit","The Education Summit","The Innovation Week","Twende Build It","Twende CCB","Twende Cultural Week","Twende Environmental Expo","Twende Farmers week","Twende Jamii Tech Incubation Program","Twende STEM Outreach","Twende kumasi"],
                 "Location": [text2,"Arusha","Dar-es-salaam","Dodoma","Geita","Iringa","Kagera","Katavi","Kigoma","Kilimanjaro","Manyara","Mbeya","Morogoro","Mwanza","Pwani","Rukwa","Singida","Songea","Tabora","Tanga","Zanzibar"],
@@ -62,7 +61,8 @@ if st.button("Process"):
                 "Insurance Cost": [text12],
                 "Miscellaneous Expenses": [text13]}
         
-        data_frame = pd.DataFrame(data)
+#         data_frame = pd.DataFrame(data)
+        data
 #         df_encoded = pd.get_dummies(data_frame, columns=['Event name', 'Location'])
 #         df_encoded=df_encoded.astype(np.float32)
 #         df_encoded
