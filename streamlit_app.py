@@ -65,7 +65,7 @@ if st.button("Process"):
          data_frame = pd.DataFrame(data)
          data_frame['Event name'] = pd.factorize(data_frame['Event name'])[0]
          data_frame['Location'] = pd.factorize(data_frame['Location'])[0]
-         data_frame       
+         data_frame.shape       
 #         loaded_model = tf.keras.models.load_model('Twende/assets')
 
 #         # make predictions on new data
